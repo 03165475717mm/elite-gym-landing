@@ -150,6 +150,27 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('exit-popup').style.display = 'none';
     });
 
+    // Mobile Menu Toggle
+    const hamburger = document.getElementById('hamburger-btn');
+    const closeMenu = document.getElementById('close-menu');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('#nav-menu ul li a');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.add('active');
+    });
+
+    closeMenu.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
+    });
+
     // Smooth Scroll for Nav Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -159,7 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 target.scrollIntoView({
                     behavior: 'smooth'
                 });
-                // Close mobile menu if open (though we don't have one yet)
             }
         });
     });
