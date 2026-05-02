@@ -1,0 +1,300 @@
+P
+.testimonial-card {
+    background: var(--bg-card);
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.testimonial-stars {
+    color: #FFD700;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+.client-name {
+    font-family: var(--font-heading);
+    color: var(--accent-primary);
+    font-weight: 800;
+}
+
+/* Map Section */
+.map-container {
+    width: 100%;
+    height: 450px;
+    filter: grayscale(1) invert(1) contrast(1.2);
+    border-top: 1px solid rgba(255, 77, 0, 0.3);
+}
+
+/* Additional Animations */
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-attachment: fixed;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.2;
+}
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 10px rgba(255, 77, 0, 0.3); }
+    50% { box-shadow: 0 0 25px rgba(255, 77, 0, 0.6); }
+    100% { box-shadow: 0 0 10px rgba(255, 77, 0, 0.3); }
+}
+
+.btn-primary {
+    animation: pulse-glow 3s infinite;
+}
+
+/* Pricing */
+.pricing {
+    padding: 8rem 5%;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.price-card {
+    background: var(--bg-card);
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: var(--transition);
+    position: relative;
+}
+
+.price-card.popular {
+    border-color: var(--accent-primary);
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #121212, #1a1a1a);
+}
+
+.popular-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--accent-primary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+.price-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 4rem;
+    font-weight: 900;
+    font-family: var(--font-heading);
+    margin-bottom: 1rem;
+}
+
+.price span {
+    font-size: 1rem;
+    color: var(--text-muted);
+}
+
+.price-features {
+    list-style: none;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.price-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.price-features i {
+    color: var(--accent-primary);
+}
+
+/* Urgency Offer */
+.urgency {
+    background: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+.urgency h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.count-item {
+    background: rgba(0,0,0,0.3);
+    padding: 1.5rem;
+    border-radius: 8px;
+    min-width: 100px;
+}
+
+.count-item span {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+}
+
+.count-item label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+/* Trainers */
+.trainers {
+    padding: 8rem 5%;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.trainer-card {
+    background: var(--bg-card);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.trainer-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.trainer-info {
+    padding: 2rem;
+}
+
+/* Form */
+.contact {
+    padding: 8rem 5%;
+    background: var(--bg-card);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.lead-form {
+    background: #1a1a1a;
+    padding: 3rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    background: #0a0a0a;
+    border: 1px solid #333;
+    padding: 1rem;
+    color: white;
+    border-radius: 4px;
+    outline: none;
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    border-color: var(--accent-primary);
+}
+
+.submit-btn {
+    width: 100%;
+    background: var(--accent-primary);
+    color: white;
+    border: none;
+    padding: 1.2rem;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    cursor: pointer;
+    transition: var(--transition);
+    clip-path: polygon(5% 0, 100% 0, 95% 100%, 0% 100%);
+}
+
+.submit-btn:hover {
+    background: var(--accent-secondary);
+}
+
+/* Floating Elements */
+.floating-whatsapp {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    z-index: 1000;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.floating-whatsapp:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .problem-solution, .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    header nav {
+        display: none;
+    }
+    
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
