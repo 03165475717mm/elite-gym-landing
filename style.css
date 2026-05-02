@@ -1154,3 +1154,116 @@ header nav ul li a:hover {
     box-shadow: 0 0 60px rgba(255, 77, 0, 0.5);
 }
 
+/* Exit Modal */
+.exit-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.exit-content {
+    background: var(--bg-card);
+    padding: 4rem 3rem;
+    border-radius: 20px;
+    border: 2px solid var(--accent-primary);
+    text-align: center;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 0 100px rgba(255, 77, 0, 0.3);
+}
+
+.exit-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.exit-close:hover {
+    color: white;
+    transform: rotate(90deg);
+}
+
+.exit-badge {
+    background: var(--accent-primary);
+    color: white;
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.exit-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.exit-content p {
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.exit-features {
+    text-align: left;
+    margin-bottom: 3rem;
+    display: grid;
+    gap: 1.2rem;
+}
+
+.exit-feat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.exit-feat-item i {
+    color: var(--accent-primary);
+    width: 20px;
+    height: 20px;
+}
+
+.exit-feat-item span {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.exit-expiry {
+    font-size: 0.8rem !important;
+    margin-top: 1.5rem !important;
+    opacity: 0.5;
+    font-family: var(--font-heading);
+}
+
+@media (max-width: 600px) {
+    .exit-content {
+        padding: 3rem 1.5rem;
+    }
+    
+    .exit-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .exit-features {
+        gap: 1rem;
+    }
+    
+    .exit-feat-item span {
+        font-size: 0.9rem;
+    }
+}
