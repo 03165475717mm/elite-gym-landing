@@ -164,20 +164,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Form Submission (Simulated)
+    // Form Submission (Submit to Formspree)
     const form = document.getElementById('membership-form');
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+    form.addEventListener('submit', () => {
         const btn = form.querySelector('.submit-btn');
-        const originalText = btn.innerText;
-        btn.innerText = 'PROCESSING...';
+        btn.innerText = 'SENDING...';
+        btn.style.opacity = '0.7';
         btn.disabled = true;
-
-        setTimeout(() => {
-            alert('SUCCESS! Your free trial has been reserved. Our team will contact you shortly via WhatsApp/Phone.');
-            btn.innerText = originalText;
-            btn.disabled = false;
-            form.reset();
-        }, 2000);
+        // Form will naturally submit to the action URL in HTML
     });
 });
