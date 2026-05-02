@@ -29,6 +29,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,8 @@ body {
     font-family: var(--font-body);
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -51,8 +54,8 @@ h1, h2, h3, h4, h5 {
     text-transform: uppercase;
 }
 
-h1 { font-size: clamp(2.5rem, 6vw, 5rem); }
-h2 { font-size: clamp(2rem, 4vw, 3.5rem); }
+h1 { font-size: clamp(1.8rem, 5vw, 5rem); }
+h2 { font-size: clamp(1.6rem, 4vw, 3.5rem); }
 h3 { font-size: 1.5rem; }
 
 .gradient-text {
@@ -128,13 +131,15 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 1.5rem 5%;
+    max-width: 100vw;
+    padding: 1.2rem 4%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     z-index: 1000;
     transition: var(--transition);
     background: transparent;
+    box-sizing: border-box;
 }
 
 header.scrolled {
@@ -231,15 +236,19 @@ header nav ul li a:hover {
     padding: 0 5%;
     max-width: 800px;
     padding-top: 8rem;
+    box-sizing: border-box;
+    width: 100%;
 }
 
 .hero-content h1 {
     margin-bottom: 1.5rem;
     text-shadow: 0 0 40px rgba(0,0,0,0.8);
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: rgba(255,255,255,0.8);
     margin-bottom: 2.5rem;
     max-width: 600px;
@@ -926,6 +935,24 @@ header nav ul li a:hover {
 @media (max-width: 600px) {
     .hero-btns {
         flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-primary,
+    .btn-whatsapp {
+        width: 100%;
+        justify-content: center;
+        clip-path: none;
+    }
+
+    .nav-cta {
+        clip-path: none;
+        padding: 0.6rem 1rem;
+        font-size: 0.7rem;
+    }
+
+    .logo {
+        font-size: 1.2rem;
     }
 
     .stats {
@@ -941,14 +968,41 @@ header nav ul li a:hover {
     }
 
     .hero-content {
-        padding-top: 6rem;
+        padding-top: 5rem;
+        padding-right: 4%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(1.6rem, 10vw, 2.8rem);
     }
 
     .urgency h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .countdown {
         flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .count-item {
+        min-width: 60px;
+        padding: 0.8rem;
+    }
+
+    .count-item span {
+        font-size: 1.8rem;
+    }
+
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-card.popular {
+        transform: none;
     }
 }
